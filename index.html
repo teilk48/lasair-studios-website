@@ -12,8 +12,10 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Lasair Studios home">
-      <span class="brand-mark" aria-hidden="true">L</span>
-      <span><strong>Lasair</strong><small>Studios · Scotland</small></span>
+      <span class="brand-lockup">
+        <img class="brand-wordmark" src="assets/branding/lasair-title.png" alt="Lasair">
+        <img class="brand-strapline" src="assets/branding/handcrafted-scotland.png" alt="Handcrafted in Scotland">
+      </span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" aria-label="Main navigation">
@@ -26,7 +28,11 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Handmade in Fife, Scotland</p>
+        <div class="hero-brand" aria-label="Lasair — handcrafted in Scotland">
+          <img src="assets/branding/lasair-title.png" alt="Lasair">
+          <img src="assets/branding/handcrafted-scotland.png" alt="Handcrafted in Scotland">
+        </div>
+        <p class="eyebrow">Jesmonite objects · atmospheric home fragrance</p>
         <h1>Objects with a little <em>fire</em> in them.</h1>
         <p class="hero-intro">Small-batch Jesmonite décor and atmospheric home fragrance, cast, coloured and finished by hand.</p>
         <div class="hero-actions">
@@ -43,6 +49,7 @@
 
     <section class="manifesto" aria-label="Lasair Studios introduction">
       <p>From quiet, useful forms to wonderfully strange creatures.</p>
+      <img class="manifesto-cow" src="assets/branding/cow-logo.png" alt="Lasair Highland cow illustration">
       <span>Every pour creates a pattern that cannot be repeated.</span>
     </section>
 
@@ -88,7 +95,12 @@
   </main>
 
   <footer>
-    <a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true">L</span><span><strong>Lasair</strong><small>Studios · Scotland</small></span></a>
+    <a class="brand brand-footer" href="#top" aria-label="Lasair Studios home">
+      <span class="brand-lockup">
+        <img class="brand-wordmark" src="assets/branding/lasair-title.png" alt="Lasair">
+        <img class="brand-strapline" src="assets/branding/handcrafted-scotland.png" alt="Handcrafted in Scotland">
+      </span>
+    </a>
     <p>Handmade objects for distinctive spaces.</p>
     <div><a href="https://www.etsy.com/uk/shop/LasairStudio" target="_blank" rel="noopener">Etsy</a><span>© <span id="year"></span> Lasair Studios</span></div>
   </footer>

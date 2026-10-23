@@ -11,6 +11,7 @@ Open `index.html` directly, or run any simple static web server from this direct
 - `index.html` — page structure and content
 - `styles.css` — responsive visual design
 - `app.js` — product catalogue, filters and product detail gallery
+- `assets/branding` — supplied Lasair wordmark, handcrafted strapline and Highland cow artwork
 
 The site currently uses Lasair Studios' Etsy-hosted product photographs. Before the final production launch, download these into a local `assets` directory so the website does not depend on Etsy's image URLs.
 
