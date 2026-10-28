@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -19,6 +20,7 @@ SHOP_NAME = "LasairStudio"
 ROOT = Path(__file__).resolve().parents[1]
 APP_FILE = ROOT / "app.js"
 OUTPUT_FILE = ROOT / "etsy-products.js"
+INDEX_FILE = ROOT / "index.html"
 
 
 def api_credentials() -> str:
@@ -173,6 +175,21 @@ def build_overlay(credentials: str) -> tuple[dict[str, dict[str, object]], int]:
     return overlay, new_listing_count
 
 
+def update_catalogue_asset_version(content: str) -> None:
+    """Make browsers fetch each newly generated Etsy catalogue."""
+    version = hashlib.sha256(content.encode("utf-8")).hexdigest()[:12]
+    index = INDEX_FILE.read_text(encoding="utf-8")
+    updated, replacements = re.subn(
+        r'etsy-products\.js(?:\?v=[^"\s]+)?',
+        f"etsy-products.js?v={version}",
+        index,
+        count=1,
+    )
+    if replacements != 1:
+        raise RuntimeError("Could not update the Etsy catalogue asset version in index.html")
+    INDEX_FILE.write_text(updated, encoding="utf-8")
+
+
 def main() -> int:
     credentials = api_credentials()
     overlay, new_listing_count = build_overlay(credentials)
@@ -181,6 +198,7 @@ def main() -> int:
         f"window.etsyProducts = {json.dumps(overlay, ensure_ascii=False, indent=2)};\n"
     )
     OUTPUT_FILE.write_text(content, encoding="utf-8")
+    update_catalogue_asset_version(content)
     active_count = sum(item.get("active") is True for item in overlay.values())
     inactive_count = sum(item.get("active") is False for item in overlay.values())
     print(

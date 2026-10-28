@@ -41,7 +41,7 @@ jobs:
         id: catalogue
         shell: bash
         run: |
-          if git diff --quiet -- etsy-products.js; then
+          if git diff --quiet -- etsy-products.js index.html; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "Lasair Etsy Sync"
           git config user.email "actions@users.noreply.github.com"
-          git add etsy-products.js
+          git add etsy-products.js index.html
           git commit -m "Sync Etsy catalogue"
           git push
 
