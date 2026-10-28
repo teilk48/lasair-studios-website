@@ -2,6 +2,12 @@ name: Sync Etsy catalogue
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-etsy.yml"
+      - "scripts/sync_etsy.py"
   schedule:
     - cron: "17 3 * * *"
       timezone: "Europe/London"
