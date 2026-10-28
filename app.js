@@ -1,4 +1,4 @@
-const products = [
+const curatedProducts = [
   {
     id: '4594243593', category: 'seasonal', tag: 'Seasonal', name: 'Christmas Tree Centrepiece', price: 'From £7.95', material: 'Jesmonite · made to order',
     etsy: 'https://lasairstudio.etsy.com/uk/listing/4594243593/jesmonite-christmas-tree-centrepiece-set',
@@ -99,20 +99,31 @@ const products = [
   }
 ];
 
+const products = curatedProducts
+  .map(product => ({ ...product, ...(window.etsyProducts?.[product.id] || {}) }))
+  .filter(product => product.active !== false);
+
 const grid = document.querySelector('#product-grid');
 const dialog = document.querySelector('#product-dialog');
 const dialogContent = document.querySelector('#dialog-content');
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+  })[character]);
+}
+
 function productCard(product) {
+  const name = escapeHtml(product.name);
   return `<article class="product-card" data-category="${product.category}">
-    <div class="product-image-wrap" data-product="${product.id}" tabindex="0" role="button" aria-label="View ${product.name}">
-      <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
-      <span class="product-tag">${product.tag}</span>
+    <div class="product-image-wrap" data-product="${product.id}" tabindex="0" role="button" aria-label="View ${name}">
+      <img src="${escapeHtml(product.images[0])}" alt="${name}" loading="lazy">
+      <span class="product-tag">${escapeHtml(product.tag)}</span>
       <button class="quick-view" type="button" data-product="${product.id}">View details</button>
     </div>
     <div class="product-info">
-      <h3>${product.name}</h3>
-      <div class="product-meta"><span>${product.material}</span><span class="product-price">${product.price}</span></div>
+      <h3>${name}</h3>
+      <div class="product-meta"><span>${escapeHtml(product.material)}</span><span class="product-price">${escapeHtml(product.price)}</span></div>
     </div>
   </article>`;
 }
@@ -125,18 +136,19 @@ function renderProducts(filter = 'all') {
 function openProduct(id) {
   const product = products.find(item => item.id === id);
   if (!product) return;
+  const name = escapeHtml(product.name);
   dialogContent.innerHTML = `<div class="dialog-layout">
     <div class="dialog-gallery">
-      <div class="dialog-main-image"><img src="${product.images[0]}" alt="${product.name}" id="dialog-main-image"></div>
-      <div class="dialog-thumbs" aria-label="Product images">${product.images.map((image, index) => `<button class="dialog-thumb ${index === 0 ? 'is-active' : ''}" type="button" data-image="${image}" aria-label="View image ${index + 1}"><img src="${image}" alt=""></button>`).join('')}</div>
+      <div class="dialog-main-image"><img src="${escapeHtml(product.images[0])}" alt="${name}" id="dialog-main-image"></div>
+      <div class="dialog-thumbs" aria-label="Product images">${product.images.map((image, index) => `<button class="dialog-thumb ${index === 0 ? 'is-active' : ''}" type="button" data-image="${escapeHtml(image)}" aria-label="View image ${index + 1}"><img src="${escapeHtml(image)}" alt=""></button>`).join('')}</div>
     </div>
     <div class="dialog-copy">
-      <p class="eyebrow">${product.tag} · handmade in Scotland</p>
-      <h2 id="dialog-title">${product.name}</h2>
-      <p class="dialog-price">${product.price}</p>
-      <p class="dialog-description">${product.description}</p>
-      <ul class="spec-list">${product.specs.map(spec => `<li>${spec}</li>`).join('')}</ul>
-      <a class="button" href="${product.etsy}" target="_blank" rel="noopener">Choose options on Etsy <span aria-hidden="true">↗</span></a>
+      <p class="eyebrow">${escapeHtml(product.tag)} · handmade in Scotland</p>
+      <h2 id="dialog-title">${name}</h2>
+      <p class="dialog-price">${escapeHtml(product.price)}</p>
+      <p class="dialog-description">${escapeHtml(product.description)}</p>
+      <ul class="spec-list">${product.specs.map(spec => `<li>${escapeHtml(spec)}</li>`).join('')}</ul>
+      <a class="button" href="${escapeHtml(product.etsy)}" target="_blank" rel="noopener">Choose options on Etsy <span aria-hidden="true">↗</span></a>
       <p class="dialog-note">Secure ordering, variations and delivery are handled by Etsy.</p>
     </div>
   </div>`;
