@@ -55,7 +55,16 @@ def api_get(path: str, credentials: str, **params: object) -> object:
                     retry_after = int(error.headers.get("retry-after", "0") or 0)
                     time.sleep(max(retry_after, 2**attempt))
                     continue
-            raise RuntimeError(f"Etsy API request failed with HTTP {error.code}") from error
+            detail = ""
+            try:
+                error_payload = json.loads(error.read().decode("utf-8"))
+                detail = str(error_payload.get("error") or error_payload.get("message") or "").strip()
+            except (UnicodeDecodeError, json.JSONDecodeError, AttributeError):
+                pass
+            suffix = f": {detail}" if detail else ""
+            raise RuntimeError(
+                f"Etsy API request to {path} failed with HTTP {error.code}{suffix}"
+            ) from error
         except URLError as error:
             if attempt < 3:
                 time.sleep(2**attempt)
