@@ -122,7 +122,7 @@ function productCard(product) {
       <button class="quick-view" type="button" data-product="${product.id}">View details</button>
     </div>
     <div class="product-info">
-      <h3>${name}</h3>
+      <h3><a class="product-page-link" href="products/${product.id}/">${name}</a></h3>
       <div class="product-meta"><span>${escapeHtml(product.material)}</span><span class="product-price">${escapeHtml(product.price)}</span></div>
     </div>
   </article>`;
