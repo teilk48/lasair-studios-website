@@ -41,7 +41,7 @@ jobs:
         id: catalogue
         shell: bash
         run: |
-          if git diff --quiet -- etsy-products.js index.html sitemap.xml products; then
+          if [[ -z "$(git status --porcelain -- etsy-products.js index.html sitemap.xml products)" ]]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
