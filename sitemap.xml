@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.lasair-studios.co.uk/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -144,6 +144,36 @@
     <image:image>
       <image:loc>https://i.etsystatic.com/68525798/r/il/d17762/8668466638/il_fullxfull.8668466638_7yp3.jpg</image:loc>
       <image:title>Handmade Eco-Resin Wolf Skull , Gothic Skull Figurine, 8 cm, Custom Colours, Scotland</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.lasair-studios.co.uk/products/4625661937/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://i.etsystatic.com/68525798/r/il/13e244/8974909563/il_fullxfull.8974909563_ku9c.jpg</image:loc>
+      <image:title>Highland Cow Wall Art, Layered Wooden Relief Plaque, 25 × 21 cm</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.lasair-studios.co.uk/products/4625673225/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://i.etsystatic.com/68525798/r/il/824337/8927282842/il_fullxfull.8927282842_hwig.jpg</image:loc>
+      <image:title>Scottish Wildlife Slate Coasters, Set of 6, Laser Engraved, 10 × 10 cm</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.lasair-studios.co.uk/products/4625678997/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://i.etsystatic.com/68525798/r/il/5412b9/8975123335/il_fullxfull.8975123335_rtuo.jpg</image:loc>
+      <image:title>Scottish Marine Life Slate Coasters, Set of 6, Laser Engraved, 10 × 10 cm with handmade wooden box</image:title>
     </image:image>
   </url>
 </urlset>
