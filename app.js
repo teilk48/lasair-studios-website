@@ -1,5 +1,12 @@
 const curatedProducts = [
   {
+    id: '4626933476', category: 'wood-slate', tag: 'Wall mirror', name: 'Highland Cow Engraved Mirror', price: '£59.99', material: 'Engraved mirror & pine · 45 × 30 cm',
+    etsy: 'https://lasairstudio.etsy.com/uk/listing/4626933476/highland-cow-engraved-wall-mirror-45-x',
+    description: 'A portrait wall mirror engraved with a Highland cow among wild grasses. Its warm light-oak pine frame and detailed lower-panel design bring Scottish character to a hallway, bedroom or living space while leaving plenty of reflective area for everyday use.',
+    specs: ['Approximately 45 × 30 cm', 'Portrait orientation', 'Light-oak pine frame', 'Laser engraved and handcrafted in Scotland'],
+    images: ['https://i.etsystatic.com/68525798/r/il/5eeb5b/8985539263/il_fullxfull.8985539263_mjwb.jpg','https://i.etsystatic.com/68525798/r/il/0bd6c9/8985539255/il_fullxfull.8985539255_4uiz.jpg','https://i.etsystatic.com/68525798/r/il/5107e0/8985539267/il_fullxfull.8985539267_5hhq.jpg','https://i.etsystatic.com/68525798/r/il/f73c90/8937754508/il_fullxfull.8937754508_fec8.jpg']
+  },
+  {
     id: '4625661937', category: 'wood-slate', tag: 'Wall art', name: 'Highland Cow Wall Art', price: 'From £35.00', material: 'Layered hardwood plywood · 25 × 21 cm',
     etsy: 'https://lasairstudio.etsy.com/uk/listing/4625661937/highland-cow-wall-art-layered-wooden',
     description: 'A shaggy Highland cow brought to life in layered wood. Each plaque is laser cut, stained and assembled by hand, with contrasting walnut, dark oak and ebony tones that leave the natural grain visible.',
