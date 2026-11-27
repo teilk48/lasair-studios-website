@@ -329,7 +329,7 @@ def render_product_page(product: dict[str, object]) -> str:
     <nav aria-label="Main navigation">
       <a href="../../#collection">Collection</a>
       <a href="../../#story">Our craft</a>
-      <a class="nav-etsy" href="https://www.etsy.com/uk/shop/LasairStudio" target="_blank" rel="noopener">Visit Etsy <span aria-hidden="true">↗</span></a>
+      <a class="nav-etsy" href="https://lasairstudio.etsy.com" target="_blank" rel="noopener">Visit Etsy <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
   <main class="product-page-main">
@@ -351,7 +351,7 @@ def render_product_page(product: dict[str, object]) -> str:
       <img class="brand-cow brand-cow-footer" src="../../assets/branding/cow-logo-transparent.png" alt="Lasair Studios Highland cow logo">
     </a>
     <p>Handmade objects for distinctive spaces.</p>
-    <div><a href="https://www.etsy.com/uk/shop/LasairStudio" target="_blank" rel="noopener">Etsy</a><span>© {datetime.now(tz=UTC).year} Lasair Studios</span></div>
+    <div><a href="https://lasairstudio.etsy.com" target="_blank" rel="noopener">Etsy</a><span>© {datetime.now(tz=UTC).year} Lasair Studios</span></div>
   </footer>
 </body>
 </html>

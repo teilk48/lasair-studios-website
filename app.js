@@ -1,5 +1,26 @@
 const curatedProducts = [
   {
+    id: '4625661937', category: 'wood-slate', tag: 'Wall art', name: 'Highland Cow Wall Art', price: 'From £35.00', material: 'Layered hardwood plywood · 25 × 21 cm',
+    etsy: 'https://lasairstudio.etsy.com/uk/listing/4625661937/highland-cow-wall-art-layered-wooden',
+    description: 'A shaggy Highland cow brought to life in layered wood. Each plaque is laser cut, stained and assembled by hand, with contrasting walnut, dark oak and ebony tones that leave the natural grain visible.',
+    specs: ['Layered 3 mm hardwood plywood', '25 cm high × 21 cm wide', 'Laser cut, stained and assembled by hand', 'Optional sawtooth picture hanger'],
+    images: ['https://i.etsystatic.com/68525798/r/il/13e244/8974909563/il_fullxfull.8974909563_ku9c.jpg','https://i.etsystatic.com/68525798/r/il/6ee81d/8974909409/il_fullxfull.8974909409_5468.jpg','https://i.etsystatic.com/68525798/r/il/e92a9e/8974909441/il_fullxfull.8974909441_7w1d.jpg','https://i.etsystatic.com/68525798/r/il/877862/8974909445/il_fullxfull.8974909445_8pbs.jpg']
+  },
+  {
+    id: '4625673225', category: 'wood-slate', tag: 'Scottish wildlife', name: 'Scottish Wildlife Slate Coasters', price: '£35.00', material: 'Engraved slate · set of six',
+    etsy: 'https://lasairstudio.etsy.com/uk/listing/4625673225/scottish-wildlife-slate-coasters-set-of',
+    description: 'Six laser-engraved slate coasters celebrating Scottish wildlife: Highland cow, red deer stag, red squirrel, pine marten, robin and red fox. The set arrives in a handmade engraved wooden storage box.',
+    specs: ['Six natural slate coasters', 'Approximately 10 × 10 cm each', 'Treated with food-safe mineral oil', 'Handmade engraved wooden box'],
+    images: ['https://i.etsystatic.com/68525798/r/il/824337/8927282842/il_fullxfull.8927282842_hwig.jpg','https://i.etsystatic.com/68525798/r/il/6db818/8927282566/il_fullxfull.8927282566_3ya6.jpg','https://i.etsystatic.com/68525798/r/il/88ca17/8927283192/il_fullxfull.8927283192_lcxg.jpg','https://i.etsystatic.com/68525798/r/il/4e03bf/8975063053/il_fullxfull.8975063053_2mni.jpg']
+  },
+  {
+    id: '4625678997', category: 'wood-slate', tag: 'Marine life', name: 'Scottish Marine Life Slate Coasters', price: '£35.00', material: 'Engraved slate · set of six',
+    etsy: 'https://lasairstudio.etsy.com/uk/listing/4625678997/scottish-marine-life-slate-coasters-set',
+    description: 'A set of six laser-engraved slate coasters inspired by Scottish marine life. Pale engraving stands out against the natural dark slate, and the set comes in a handmade engraved wooden storage box.',
+    specs: ['Six natural slate coasters', 'Approximately 10 × 10 cm each', 'Laser engraved in Fife', 'Handmade engraved wooden box'],
+    images: ['https://i.etsystatic.com/68525798/r/il/5412b9/8975123335/il_fullxfull.8975123335_rtuo.jpg','https://i.etsystatic.com/68525798/r/il/3786b4/8975123595/il_fullxfull.8975123595_3vf7.jpg','https://i.etsystatic.com/68525798/r/il/8bf66f/8975123505/il_fullxfull.8975123505_jb1a.jpg','https://i.etsystatic.com/68525798/r/il/a6f062/8927344048/il_fullxfull.8927344048_gc2g.jpg']
+  },
+  {
     id: '4594243593', category: 'seasonal', tag: 'Seasonal', name: 'Christmas Tree Centrepiece', price: 'From £7.95', material: 'Jesmonite · made to order',
     etsy: 'https://lasairstudio.etsy.com/uk/listing/4594243593/jesmonite-christmas-tree-centrepiece-set',
     description: 'A tree-shaped tray with three freestanding open-outline trees. Arrange the complete set as a festive centrepiece, or display the pieces separately. Each piece is cast by hand in your chosen colour combination.',

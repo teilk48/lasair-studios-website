@@ -1,6 +1,6 @@
 # Lasair Studios website
 
-A responsive catalogue site for Lasair Studios. Products are presented on the Lasair domain and purchases continue securely through the corresponding Etsy listing.
+A responsive catalogue site for Lasair Studios' handmade wood, slate and Eco-Resin collection. Products are presented on the Lasair domain and purchases continue securely through the corresponding Etsy listing.
 
 ## Preview locally
 
